@@ -1,0 +1,1 @@
+(()=>{"use strict";document.getElementById("content").appendChild(function(){const e=document.createElement("header");e.classList.add("header");const t=document.createElement("h1");return t.classList.add("restaurant-name"),t.textContent="Impastable Restaurante",e.appendChild(t),e}())})();
