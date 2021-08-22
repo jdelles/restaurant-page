@@ -1,3 +1,7 @@
+import loadHome from "./Home/home.js";
+import loadMenu from "./Menu/menu.js";
+import loadContact from "./Contact/contact.js";
+
 function loadHeader() {
     const header = document.createElement("header");
     
@@ -6,15 +10,18 @@ function loadHeader() {
   
     header.appendChild(name);
 
-    // add nav
+    // add nav TODO: onclicks bugged
     const nav = document.createElement("nav"); 
     const list = document.createElement("ul"); 
     const home = document.createElement("li");
+    // home.onclick = loadHome(); 
     home.textContent = "Home"; 
     const menu = document.createElement("li"); 
     menu.textContent = "Menu"; 
+    // menu.onclick = loadMenu(); 
     const contact = document.createElement("li"); 
     contact.textContent = "Contact"; 
+    // contact.onclick = loadContact(); 
 
     list.appendChild(home);
     list.appendChild(menu); 
@@ -28,14 +35,15 @@ function loadHeader() {
   }
 
 function loadMain() {
-    const main = document.createElement("main"); 
-
-    return main;
+    return document.createElement("main");
 }
 
 function loadFooter() {
     const footer = document.createElement("footer"); 
+    const div = document.createElement("div"); 
+    div.innerHTML = '<p>Copyright © <a href="https://www.github.com/jdelles">James Delles</a> 2021</p>'; 
 
+    footer.appendChild(div); 
 
     return footer; 
 }
@@ -45,6 +53,7 @@ function load() {
     content.appendChild(loadHeader()); 
     content.appendChild(loadMain()); 
     content.appendChild(loadFooter()); 
+    loadHome(); 
   }
  
   export default load; 
