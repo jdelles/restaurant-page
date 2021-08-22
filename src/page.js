@@ -1,6 +1,6 @@
-import loadHome from "./Home/home.js";
-import loadMenu from "./Menu/menu.js";
-import loadContact from "./Contact/contact.js";
+import loadHome from "./home.js";
+import loadMenu from "./menu.js";
+import loadContact from "./contact.js";
 
 function loadHeader() {
     const header = document.createElement("header");
@@ -12,22 +12,29 @@ function loadHeader() {
 
     // add nav TODO: onclicks bugged
     const nav = document.createElement("nav"); 
-    const list = document.createElement("ul"); 
-    const home = document.createElement("li");
-    // home.onclick = loadHome(); 
+    
+    const home = document.createElement("button");
+    home.addEventListener("click", () => {
+        loadHome();
+    });  
     home.textContent = "Home"; 
-    const menu = document.createElement("li"); 
+    
+    const menu = document.createElement("button"); 
+    menu.addEventListener("click", () => {
+        loadMenu();
+    });
     menu.textContent = "Menu"; 
-    // menu.onclick = loadMenu(); 
-    const contact = document.createElement("li"); 
+    
+    const contact = document.createElement("button"); 
+    contact.addEventListener("click", () => {
+        loadContact();
+    });
     contact.textContent = "Contact"; 
-    // contact.onclick = loadContact(); 
 
-    list.appendChild(home);
-    list.appendChild(menu); 
-    list.appendChild(contact); 
 
-    nav.appendChild(list); 
+    nav.appendChild(home);
+    nav.appendChild(menu); 
+    nav.appendChild(contact); 
 
     header.appendChild(nav); 
 
