@@ -1,0 +1,66 @@
+:root {
+    --color-brown: #854d27; 
+    --color-orange: #dd7230; 
+    --color-tan: #f4c95d; 
+    --color-yellow: #e7e393;
+    --color-black: #04030f; 
+}
+
+*, 
+*::after, 
+*::before {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-tan);
+}
+
+header {
+    text-align: center;
+    background: var(--color-yellow); 
+    font-size: 24px;
+    padding: 2em;
+}
+
+button {
+    padding: 5px 10px; 
+    margin: 5px; 
+    background-color: var(--color-black);
+    color: var(--color-yellow); 
+    font-size: 18px; 
+    border: 1px solid transparent; 
+}
+
+button:hover {
+    background: var(--color-brown);
+    cursor: pointer;
+}
+
+main {
+    margin: 0 auto; 
+    max-width: 700px; 
+}
+
+footer {
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    background: var(--color-brown); 
+    color: var(--color-yellow); 
+    font-size: 16px; 
+    padding: 1em; 
+    text-align: center; 
+}
+
+footer a {
+    color: var(--color-orange); 
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color-black); 
+    cursor: pointer;
+}
