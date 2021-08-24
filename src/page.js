@@ -1,6 +1,6 @@
-import loadHome from "./home.js";
-import loadMenu from "./menu.js";
-import loadContact from "./contact.js";
+import loadHome from "./home/home.js";
+import loadMenu from "./menu/menu.js";
+import loadContact from "./contact/contact.js";
 
 function loadHeader() {
     const header = document.createElement("header");
